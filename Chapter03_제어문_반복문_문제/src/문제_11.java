@@ -6,7 +6,7 @@ public class 문제_11 {
 		for(int i=1;i<=100;i++)
 		{
 			if(i%3==0 && i%5==0)
-				System.out.printf("%-4d",i);
+				System.out.printf("%-4d",i);//print(i+" ");
 		}
 	}
 
