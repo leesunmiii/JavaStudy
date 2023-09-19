@@ -5,7 +5,7 @@ public class 문제_13 {
 		// TODO Auto-generated method stub
 		for(int i=10;i<=99;i++)
 			if(i%11==0)
-				System.out.printf("%-4d",i);
+				System.out.printf("%-4d",i);//print(i+" ");
 	}
 
 }
