@@ -1,5 +1,5 @@
 
-public class 자바데이터형변경 {
+public class 책보고테스트 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
