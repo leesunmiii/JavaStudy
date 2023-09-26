@@ -8,7 +8,9 @@ public class 문자열_02 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner scan=new Scanner(System.in);
-		String msg=""; // 문자열은 "" 붙어있어도됨 ''은 붙어쓰면 안됨
+		String msg=""; // 문자열은 "" 붙어있어도됨, ''은 붙어쓰면 안됨
+		
+		//짝수 갯수 맞추기 : 갯수가 짝수일때까지 문자열입력이라는 문장이 나옴
 		while(true)
 		{
 			System.out.print("문자열 입력:");
@@ -18,6 +20,7 @@ public class 문자열_02 {
 				break;
 			}
 		}
+		
 		//좌우대칭 확인
 		boolean bCheck=true;
 		/*
@@ -25,7 +28,7 @@ public class 문자열_02 {
 		 * 		-   -
 		 * 		 - -		
 		 */
-		int j=msg.length()-1; //변수를 안에 넣고싶으면 -i 붙여야함
+		int j=msg.length()-1; //변수를 안에 넣고싶으면 -i 붙여서 넣어야함
 		for(int i=0;i<msg.length()/2;i++)
 		{
 			//변수를 안에 넣고싶으면 int j=msg.length()-1-i;

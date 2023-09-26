@@ -68,7 +68,7 @@ public class 문자열_01_용어정리 {
 
 //		String s="Hello Java";
 //		System.out.println(s);
-//		char[] c=s.toCharArray();
+//		char[] c=s.toCharArray(); // .toCharArray() => 문자열을 char[] 문자형 배열로 바꿔주는 메소드
 //		System.out.println(Arrays.toString(c));
 		
 		char[] arr=new char [10];
@@ -82,8 +82,8 @@ public class 문자열_01_용어정리 {
 		//String s= String.valueOf(arr);
 		//System.out.println(s);
 		
-		// char[] => String valueOf
-		// String => char[] toCharArray
+		// char[] => String : valueOf
+		// String => char[] : toCharArray
 		// charAt() => char
 		
 		/*
