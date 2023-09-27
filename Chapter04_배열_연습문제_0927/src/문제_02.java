@@ -10,7 +10,7 @@ public class 문제_02 {
 			int num=(int)(Math.random()*100)+1;
 			if(max<num)
 				max=num;
-			else if(min>num)
+			if(min>num)
 				min=num;
 			System.out.print(num+" ");
 		}

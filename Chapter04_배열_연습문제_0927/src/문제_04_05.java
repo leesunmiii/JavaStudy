@@ -16,5 +16,5 @@ public class 문제_04_05 {
 		System.out.println("첫번째 자리의 수:"+" "+num[1]);
 		System.out.println("최대값:"+" "+max);
 		System.out.println();
-}
+	} 
 }
