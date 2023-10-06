@@ -9,9 +9,9 @@ public class GameView extends JPanel{
 		bird=Toolkit.getDefaultToolkit().getImage("c;\\javaDev\\bird.gif");
 		
 	}
-	public void paint(Graphic g)
+	public void paint(Graphics g)
 	{
-		g.drawImage(back,0,0,getWidth(),getHeight().this)
-		g.drawImage(bird,x,y,150,getHeight().this)
+		g.drawImage(back,0,0,getWidth(),getHeight(),this);
+		g.drawImage(bird,x,y,150,getHeight(),this);
 	}
 }
