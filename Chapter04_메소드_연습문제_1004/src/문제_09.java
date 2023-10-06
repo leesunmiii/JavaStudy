@@ -11,7 +11,8 @@ public class 문제_09 {
 	{
 		Scanner scan=new Scanner(System.in);
 		System.out.println("년도 입력 :");
-		return nextInt();
+		int year=scan.nextInt();
+		return year;
 	}
 	static boolean isYear(int year)
 	{
@@ -29,9 +30,15 @@ public class 문제_09 {
 		 else
 			 System.out.println(year+"년도는 윤년이 아닙니다");
 	}
+	static void process()
+	{
+		int year=yearInput();
+		print();
+		
+	}
 	public static void main(String[] args) {
 		// TODO Auto-generated metho
-
+		process();
 
 	}
 
