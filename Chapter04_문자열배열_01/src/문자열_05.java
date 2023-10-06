@@ -32,4 +32,5 @@ public class 문자열_05 {
 		}
 		System.out.println(msg);
 
+	}
 }
