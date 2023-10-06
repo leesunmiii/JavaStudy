@@ -85,7 +85,7 @@ public class 배열_06 {
 					
 			if(s==3)
 			{
-				system.out.println("게임을 다시 할까요?(y|Y):");
+				System.out.println("게임을 다시 할까요?(y|Y):");
 				char c=scan.next().charAt(0);
 				if(c=='Y'||c=='y')
 				{
@@ -93,8 +93,8 @@ public class 배열_06 {
 				}
 				else
 				{
-					system.out.println("Game Over!!");
-					system.exit(0);
+					System.out.println("Game Over!!");
+					System.exit(0);
 				}
 				
 			}
@@ -102,9 +102,8 @@ public class 배열_06 {
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Process();
+		process();
 	}
 	
 
-}
 }
