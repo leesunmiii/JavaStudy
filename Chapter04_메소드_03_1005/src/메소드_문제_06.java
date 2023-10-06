@@ -1,5 +1,5 @@
 // => updown 게임
-import java.util.Scanner;
+import java.util.*;
 public class 메소드_문제_06 {
 	static int comInput()
 	{
@@ -9,14 +9,13 @@ public class 메소드_문제_06 {
 	static int userInput()
 	{
 		Scanner scan=new Scanner(System.in);
+		System.out.println("정수 입력:");
 		int user=scan.nextInt();
 		return user;
 	}
 	static String check(int com, int user)
 	{
 		String res="";
-		while(true)
-		{
 		 if(com>user)
 		 {
 			res="입력된 값보다 큰 수를 입력하세요";
@@ -28,26 +27,22 @@ public class 메소드_문제_06 {
 		 else
 		 {
 			res="Game Over!!";
-			break;
 		 }
-		}
+		
 		return res;
-	}
-	static void print(String res)
-	{
-		System.out.println(res);
 	}
 	static void process()
 	{
 		int com=comInput();
+		Scanner scan=new Scanner(System.in);
 		while(true)
 		{
 			int user=userInput();
-			String res=check(com,user);
-			System.out.println(res);
-			if(res.contains("Game"))
+			String h=check(com,user);
+			System.out.println(h);
+			if(h.contains("Game"))
 			{
-				System.out.println("게임을 다시 할까요?(y|n):");
+				System.out.print("게임을 다시 할까요?(y|n):");
 				char c=scan.next().charAt(0);
 				if(c=='y' || c=='Y')
 				{
@@ -64,28 +59,29 @@ public class 메소드_문제_06 {
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		process();
 		// 컴퓨터가 숫자 추출
-		int com=(int)(Math.random()*100)+1;
-		Scanner scan=new Scanner(System.in);
-		while(true)
-		{
-			System.out.println("정수 입력(1~100):");
-			int user=scan.nextInt();
-			if(com>user)
-			{
-				System.out.println("입력된 값보다 큰 수를 입력하세요");
-			}
-			else if(com<user)
-			{
-				System.out.println("입력된 값보다 작은 수를 입력하세요");
-			}
-			else
-			{
-				System.out.println("Game Over!!");
-				break;
-			}
-			
-		}
+//		int com=(int)(Math.random()*100)+1;
+//		Scanner scan=new Scanner(System.in);
+//		while(true)
+//		{
+//			System.out.println("정수 입력(1~100):");
+//			int user=scan.nextInt();
+//			if(com>user)
+//			{
+//				System.out.println("입력된 값보다 큰 수를 입력하세요");
+//			}
+//			else if(com<user)
+//			{
+//				System.out.println("입력된 값보다 작은 수를 입력하세요");
+//			}
+//			else
+//			{
+//				System.out.println("Game Over!!");
+//				break;
+//			}
+//			
+//		}
 	}
 
 }
