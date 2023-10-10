@@ -2,7 +2,9 @@
 package com.sist.main;
 import java.util.*; // Scanner 
 import java.io.*; // 입출력(파일)
-// 일반 데이터형
+// 일반 데이터형 => 사용자 정의 데이터형 => 제공이 안됨 => 직접 제작
+// class 
+// 데이터만 저장, 메소드 저장
 class Music{
 	String rank;
 	String title;
