@@ -286,59 +286,57 @@
 //package import
 //class A // 또 class A 만들면 오류남
 //{
-	
+
 //}
-class Sawon{
+class Sawon {
 	int sabun;
 	String name;
-	String dept,job,loc;
+	String dept, job, loc;
+
 	// 보이진않지만 Sawon(){} 존재할거다 생각해야함 ==> Sawon s=new Sawon()
-	Sawon(){
-		sabun=1;
-		name="홍길동";
-		dept="개발부";
-		job="대리";
-		loc="서울";
+	Sawon() {
+		sabun = 1;
+		name = "홍길동";
+		dept = "개발부";
+		job = "대리";
+		loc = "서울";
 	}
-	//매개변수 생성자
-	Sawon(int s, String name, String dept, String job, String loc)
-	{
+
+	// 매개변수 생성자
+	Sawon(int s, String name, String dept, String job, String loc) {
 		// 지역변수 우선 순위
-		System.out.println("this:"+this); // 밤색 : 지역변수&매개변수, 파란색 : 멤버변수, 필기체 : static이라는 모양
-		sabun=s;
-		this.name=name; //this는 클래스 자신의 객체명
-		this.dept=dept;
-		this.job=job;
-		this.loc=loc;
+		System.out.println("this:" + this); // 밤색 : 지역변수&매개변수, 파란색 : 멤버변수, 필기체 : static이라는 모양
+		sabun = s;
+		this.name = name; // this는 클래스 자신의 객체명
+		this.dept = dept;
+		this.job = job;
+		this.loc = loc;
 	}
 }
+
 public class MainClass_01 {
 //		int a;
 //		a=100;
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Sawon sa=new Sawon();
-		System.out.println("사번:"+sa.sabun);
-		System.out.println("이름:"+sa.name);
-		
-		Sawon sa1=new Sawon();
-		System.out.println("사번:"+sa.sabun);
-		System.out.println("이름:"+sa.name);
-		
-		Sawon sa2=new Sawon(2,"박문수","영업부","과장","경기");
-		System.out.println("sa2:"+sa2);
-		System.out.println("사번:"+sa2.sabun);//0
-		System.out.println("이름:"+sa2.name);//null
-		
+		Sawon sa = new Sawon();
+		System.out.println("사번:" + sa.sabun);
+		System.out.println("이름:" + sa.name);
+
+		Sawon sa1 = new Sawon();
+		System.out.println("사번:" + sa.sabun);
+		System.out.println("이름:" + sa.name);
+
+		Sawon sa2 = new Sawon(2, "박문수", "영업부", "과장", "경기");
+		System.out.println("sa2:" + sa2);
+		System.out.println("사번:" + sa2.sabun);// 0
+		System.out.println("이름:" + sa2.name);// null
+
 		/*
-		 * 	Sawon s=new Sawon();
-		 * 		 --- 메모리 주소 => 주소를 활용(참조변수)
+		 * Sawon s=new Sawon(); --- 메모리 주소 => 주소를 활용(참조변수)
 		 * 
-		 *  JVM
-		 *  	this=s; => 자신 객체
-		 *  	1) 멤버변수와 지역변수 같은 경우 => 구분 
-		 *  	2) 모든 클래스는 this를 가지고 있다
-		 *  				  ----- static으로 되어있다 => JSP에서는 page라는 이름으로 사용
+		 * JVM this=s; => 자신 객체 1) 멤버변수와 지역변수 같은 경우 => 구분 2) 모든 클래스는 this를 가지고 있다 -----
+		 * static으로 되어있다 => JSP에서는 page라는 이름으로 사용
 		 */
 	}
 
