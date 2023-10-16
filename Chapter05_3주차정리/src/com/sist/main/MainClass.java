@@ -348,9 +348,9 @@ public class MainClass {
 	static int b=200;
 	public static void aaa()
 	{
-			Mainclass m=new Mainclass();
-			System.out.println(m.a);
-			System.out.println(b);
+//			Mainclass m=new Mainclass();
+//			System.out.println(m.a);
+//			System.out.println(b);
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

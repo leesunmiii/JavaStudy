@@ -7,7 +7,7 @@ public class 문제_04 {
 		
 		for(int i=1;i<=10;i++)
 		{	
-			=(int)((Math.random()*10)+1);
+			a[i]=(int)((Math.random()*10)+1);
 		}
 		
 		

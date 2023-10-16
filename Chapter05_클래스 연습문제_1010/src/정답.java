@@ -19,12 +19,12 @@ class 뮤직 {
 	int like;
 	
 }
-class 맛집_카테고리{ //3번 정답
-	int food_cate_no;
-	String title;
-	String subject;
-	String poster;
-}
+//class 맛집_카테고리{ //3번 정답
+//	int food_cate_no;
+//	String title;
+//	String subject;
+//	String poster;
+//}
 //new => 새로운 메모리 공간 생성
 
 public class 정답 {

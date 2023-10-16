@@ -101,8 +101,8 @@ public class MainClass {
 	}
 	
 	public static void main(String[] args) {
-		MainClass m=new MainClass();
-	m.display(10.5, 'A', 100);
+//		MainClass m=new MainClass();
+//	m.display(10.5, 'A', 100);
 	}
 		// TODO Auto-generated method stub
 //		// default 생성자
