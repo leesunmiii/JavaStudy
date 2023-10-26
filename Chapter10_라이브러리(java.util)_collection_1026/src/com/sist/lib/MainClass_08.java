@@ -9,7 +9,7 @@ package com.sist.lib;
  		Map => 인터페이스 (349page)
  		---
  		 | 
- 	-------------------
+ 	---------------------
  	|					|
  	Hashtable			HashMap => Hashtable을 보완한 것, 더 많이 쓰임
  	 									동기 => 비동기
