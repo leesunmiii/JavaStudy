@@ -24,7 +24,7 @@ class Student{
 	@Override
 	public boolean equals(Object obj) {
 		// TODO Auto-generated method stub
-		// 객체 비겨 => instanceof
+		// 객체 비교 => instanceof
 		if(obj instanceof Student)
 		{
 			Student s=(Student)obj;
