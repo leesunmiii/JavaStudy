@@ -81,7 +81,7 @@ package com.sist.lib;
  		Properties
  			자바에서 => 제어 파일명 : .txt , .properties
  			.xml
- 			.csv
+ 			.csv ==> R ==> 데이터베이스의 백업 파일로도 만들 수 있다
  			.json
  			-------- 각 업체에서 라이브러리 제공
  		
