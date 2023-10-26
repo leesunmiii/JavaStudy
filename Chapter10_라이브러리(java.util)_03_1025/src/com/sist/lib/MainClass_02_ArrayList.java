@@ -24,7 +24,7 @@ package com.sist.lib;
  		Map : 순서가 없다
  			  데이터 중복이 가능
  			  Key를 가지고 value를 찾는다 => 쌍으로 만들어진다
- 			  key는 중독되면 안된다
+ 			  key는 중복되면 안된다
  			  구현되는 클래스 : ***HashMap, Hashtable
  			  
  		335page
