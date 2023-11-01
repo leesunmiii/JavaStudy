@@ -1,92 +1,43 @@
 package com.sist.vo;
+
+import java.io.Serializable;
+
 /*
- *  1|1|가양칼국수버섯매운탕|4.3|
- *  서울특별시 영등포구 국제금융로 78 홍우빌딩 B1 지번 서울시 
- *  영등포구 여의도동 43-3 홍우빌딩 B1|02-784-0409|
- *  국수 / 면 요리|만원-2만원|유료주차 가능|11:30 - 21:30|
- *  가양칼국수버섯매운탕 12,000원 샤브 소고기 (200g) 12,000원
- *  |https://mp-seoul-image-production-s3.mangoplate.com/52481_1621066187997112.jpg?fit=around|512:512&crop=512:512;*,*&output-format=jpg&output-quality=80^https://mp-seoul-image-production-s3.mangoplate.com/673960_1689725902210805.jpg?fit=around|512:512&crop=512:512;*,*&output-format=jpg&output-quality=80^https://mp-seoul-image-production-s3.mangoplate.com/673960_1689725904425496.jpg?fit=around|512:512&crop=512:512;*,*&output-format=jpg&output-quality=80^https://mp-seoul-image-production-s3.mangoplate.com/24979_1686491189261172.jpg?fit=around|512:512&crop=512:512;*,*&output-format=jpg&output-quality=80^https://mp-seoul-image-production-s3.mangoplate.com/24979_1686491193055171.jpg?fit=around|512:512&crop=512:512;*,*&output-format=jpg&output-quality=80
+ *  1
+ *  |자연송이쇠고기죽
+ *  |땅에서 나는 보약 자연송이와 소고기로 끓여낸 보양 한 그릇
+ *  |https://cdn.bonif.co.kr/cmdt/BF102_thum_10000277.jpg
+ *  |16,000원
+ *  |MY메뉴 원산지정보
+ *  |땅에서 나는 보약 자연송이와 영양 가득 소고기가 만나 더욱 건강하고 든든한 프리미엄 보양죽 ※ 현미죽 변경 시 안내 현미죽은 최적의 풍미를 살린 레시피로 기존 죽 대비 제공량에 다소 차이가 있습니다.
 
  */
-public class FoodHouseVO {
-   private int fno;
-   private int cno;// category 참조 번호 
-   // foreign key
-    private String name;
-    private double score;
-    private String address;
-    private String phone;
-    private String type;
-    private String price;
-    private String parking;
-    private String time;
-    private String menu;
+public class FoodHouseVO implements Serializable{
+    private int Cno;
+    private String title;
+    private String title_explain;
     private String poster;
-	public int getFno() {
-		return fno;
-	}
-	public void setFno(int fno) {
-		this.fno = fno;
-	}
+    private String price;
+    private String mymenu;
+    private String explain;
+    
 	public int getCno() {
-		return cno;
+		return Cno;
 	}
-	public void setCno(int cno) {
-		this.cno = cno;
+	public void setCno(int fno) {
+		this.Cno = Cno;
 	}
-	public String getName() {
-		return name;
+	public String getTitle() {
+		return title;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setTitle(String title) {
+		this.title = title;
 	}
-	public double getScore() {
-		return score;
+	public String getTitle_explain() {
+		return title_explain;
 	}
-	public void setScore(double score) {
-		this.score = score;
-	}
-	public String getAddress() {
-		return address;
-	}
-	public void setAddress(String address) {
-		this.address = address;
-	}
-	public String getPhone() {
-		return phone;
-	}
-	public void setPhone(String phone) {
-		this.phone = phone;
-	}
-	public String getType() {
-		return type;
-	}
-	public void setType(String type) {
-		this.type = type;
-	}
-	public String getPrice() {
-		return price;
-	}
-	public void setPrice(String price) {
-		this.price = price;
-	}
-	public String getParking() {
-		return parking;
-	}
-	public void setParking(String parking) {
-		this.parking = parking;
-	}
-	public String getTime() {
-		return time;
-	}
-	public void setTime(String time) {
-		this.time = time;
-	}
-	public String getMenu() {
-		return menu;
-	}
-	public void setMenu(String menu) {
-		this.menu = menu;
+	public void setTitle_explain(String title_explain) {
+		this.title_explain = title_explain;
 	}
 	public String getPoster() {
 		return poster;
@@ -94,6 +45,28 @@ public class FoodHouseVO {
 	public void setPoster(String poster) {
 		this.poster = poster;
 	}
+	public String getPrice() {
+		return price;
+	}
+	public void setPrice(String price) {
+		this.price = price;
+	}
+	public String getMymenu() {
+		return mymenu;
+	}
+	public void setMymenu(String mymenu) {
+		this.mymenu = mymenu;
+	}
+	public String getExplain() {
+		return explain;
+	}
+	public void setExplain(String explain) {
+		this.explain = explain;
+	}
+    
+   
+    
+	
    
    
 }

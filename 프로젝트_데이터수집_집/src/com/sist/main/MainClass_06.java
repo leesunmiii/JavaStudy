@@ -57,16 +57,16 @@ public class MainClass_06 {
         		   ex.printStackTrace();
         	   }
         	   // 메모장 안에 내용
-        	   String msg=(i+1)+" | "+title.get(i).text()+" | "+money.get(i).text()+" | "+poster.get(i).attr("src")+" | "+subLink +"|"
-        			   			+sub_poster.get(0).attr("src")+"|"
+        	   String msg=(i+1)+" | "+title.get(i).text()+" | "+poster.get(i).attr("src")+" | "
         			   			+sub_title.get(0).text()+"|"
         			   			+sub_title2.get(0).text()+"|"
+        			   			+money.get(i).text()+" | "
         			   			+sub_explain.get(0).text()+"|"
-        			   			+sub_money.get(0).text()+"|"
+        			   			+sub_poster.get(0).attr("src")+"|"
         			   			+"\r\n";
         		
         	   // 메모장 생성
-        	   FileWriter fw=new FileWriter("c:\\java_data\\bonjuk.txt",true);
+        	   FileWriter fw=new FileWriter("c:\\java_data\\bonjukkkkkk.txt",true);
         		fw.write(msg);
         		fw.close();
         	}

@@ -4,15 +4,22 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.Dimension;
 import java.awt.GridLayout;
+import java.awt.Image;
 import java.awt.Rectangle;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.net.URL;
 import java.util.ArrayList;
 
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 
+import com.sist.common.ImageChange;
 import com.sist.manager.FoodManager;
 import com.sist.vo.FoodCategoryVO;
+import com.sist.vo.FoodHouseVO;
+
 public class HomePanel extends JPanel implements ActionListener{
    JButton b1,b2,b3,b4,b5,b6,b7,b8,b9; // 버튼 9개 추가
    PosterCard[] pcs=new PosterCard[12];
@@ -66,13 +73,9 @@ public class HomePanel extends JPanel implements ActionListener{
 	   int i=0;
 	   for(FoodCategoryVO vo:list)
 	   {
-		   //System.out.println(vo.getPoster().substring(0,vo.getPoster().lastIndexOf("?")));
+		  
 		   pcs[i]=new PosterCard(vo);
-		  // ----------------------------------------------내가 추가한 부분
-//		   if (pcs[i] != null) {
-//               pan.add(pcs[i]);
-//           }
-		   //--------------------------------------------------------------------
+		  
 		  pan.add(pcs[i]); // ================================== 원본
 		   i++;
 	   }
@@ -80,14 +83,9 @@ public class HomePanel extends JPanel implements ActionListener{
    }
    public void cardInit(ArrayList<FoodCategoryVO> list) // 초기화역할 => 화면의 상태를 초기상태로 리셋하기위해
    {
-	  // pcs = new PosterCard[list.size()]; //=============================================
 	   for(int i=0;i<list.size();i++)
 	   {
-		// 추가된 부분: null 체크 후 초기화
-//           if (pcs[i] != null) {
-//               pcs[i].poLa.setIcon(null);
-//               pcs[i].tLa.setText("");
-//           }
+
 		   pcs[i].poLa.setIcon(null);
 		   pcs[i].tLa.setText("");
 	   }
@@ -101,13 +99,13 @@ public class HomePanel extends JPanel implements ActionListener{
 		if(e.getSource()==b1)
 		{
 			ArrayList<FoodCategoryVO> list=fm.foodCategoryData(1);
-//			 FoodCategoryVO fvo=new FoodCategoryVO();
-//			   fvo.setPoster(null);
-//			   fvo.setTitle("");
-//			   for(int j=0;j<11;j++)
-//			   {
+//			FoodCategoryVO fvo=new FoodCategoryVO();
+//			fvo.setPoster(null);
+//			fvo.setTitle("fucking");
+//			for(int j=0;j<1;j++)
+//			{
 //				   list.add(fvo);
-//			   }
+//		    }
 			cardInit(list);
 			cardPrint(list);
 			  
@@ -117,7 +115,7 @@ public class HomePanel extends JPanel implements ActionListener{
 			   ArrayList<FoodCategoryVO> list=fm.foodCategoryData(2);
 			   FoodCategoryVO fvo=new FoodCategoryVO();
 			   fvo.setPoster(null);
-			   fvo.setTitle("");
+			   fvo.setTitle("fucking");
 			   for(int j=0;j<6;j++)
 			   {
 				   list.add(fvo);
@@ -125,26 +123,24 @@ public class HomePanel extends JPanel implements ActionListener{
 			cardInit(list);
 			cardPrint(list);
 		}
-//		else if(e.getSource()==b3)
-//		{
-//			ArrayList<FoodCategoryVO> list=fm.foodCategoryData(3);
-//			cardInit(list);
-//			cardPrint(list);
-//		}
-		
 		else if(e.getSource()==b3)
 		{
-			   ArrayList<FoodCategoryVO> list=fm.foodCategoryData(3);
-			   FoodCategoryVO fvo=new FoodCategoryVO();
-			  fvo.setPoster(null);
-			   fvo.setTitle("");
-			   for(int j=0;j<12;j++)
-			   {
-				   list.add(fvo);
-			   }
+			ArrayList<FoodCategoryVO> list=fm.foodCategoryData(3);
 			cardInit(list);
 			cardPrint(list);
 		}
+		
+//		else if(e.getSource()==b3)
+//		{
+//			   ArrayList<FoodCategoryVO> list=fm.foodCategoryData(3);
+//			   FoodCategoryVO fvo=new FoodCategoryVO();
+//			   for(int j=0;j<12;j++)
+//			   {
+//				   list.add(fvo);
+//			   }
+//			cardInit(list);
+//			cardPrint(list);
+//		}
 		
 	
 		
@@ -155,8 +151,7 @@ public class HomePanel extends JPanel implements ActionListener{
 			   FoodCategoryVO fvo=
 					   new FoodCategoryVO();
 			   //fvo.setPoster("c:\\javaDev\\def.png");
-			   fvo.setPoster(null);
-			   fvo.setTitle("");
+			   
 			   for(int j=0;j<5;j++)
 			   {
 				   list.add(fvo);
@@ -172,8 +167,7 @@ public class HomePanel extends JPanel implements ActionListener{
 			   FoodCategoryVO fvo=
 					   new FoodCategoryVO();
 			   //fvo.setPoster("c:\\javaDev\\def.png");
-			   fvo.setPoster(null);
-			   fvo.setTitle("");
+			   
 			   for(int j=0;j<6;j++)
 			   {
 				   list.add(fvo);
@@ -189,8 +183,7 @@ public class HomePanel extends JPanel implements ActionListener{
 			   FoodCategoryVO fvo=
 					   new FoodCategoryVO();
 			   //fvo.setPoster("c:\\javaDev\\def.png");
-			   fvo.setPoster(null);
-			   fvo.setTitle("");
+			   
 			   for(int j=0;j<4;j++)
 			   {
 				   list.add(fvo);
@@ -206,8 +199,7 @@ public class HomePanel extends JPanel implements ActionListener{
 			   FoodCategoryVO fvo=
 					   new FoodCategoryVO();
 			   //fvo.setPoster("c:\\javaDev\\def.png");
-			   fvo.setPoster(null);
-			   fvo.setTitle("");
+			   
 			   for(int j=0;j<10;j++)
 			   {
 				   list.add(fvo);
@@ -223,8 +215,7 @@ public class HomePanel extends JPanel implements ActionListener{
 			   FoodCategoryVO fvo=
 					   new FoodCategoryVO();
 			   //fvo.setPoster("c:\\javaDev\\def.png");
-			   fvo.setPoster(null);
-			   fvo.setTitle("");
+			   
 			   for(int j=0;j<10;j++)
 			   {
 				   list.add(fvo);
@@ -240,8 +231,7 @@ public class HomePanel extends JPanel implements ActionListener{
 			   FoodCategoryVO fvo=
 					   new FoodCategoryVO();
 			   //fvo.setPoster("c:\\javaDev\\def.png");
-			   fvo.setPoster(null);
-			   fvo.setTitle("");
+			   
 			   for(int j=0;j<7;j++)
 			   {
 				   list.add(fvo);
@@ -250,4 +240,89 @@ public class HomePanel extends JPanel implements ActionListener{
 			cardPrint(list);
 		}
 	}
+	
+	
+//	public void foodPrint1(ArrayList<FoodHouseVO> list)
+//    {
+//		JTable table;
+//	    DefaultTableModel model;
+//	    String[] col={"","이미지","맛집정보"};
+//   	 Object[][] row=new Object[0][3];
+//	    model=new DefaultTableModel(row,col) {
+//
+//			@Override
+//			public boolean isCellEditable(int row, int column) {
+//				// TODO Auto-generated method stub
+//				return false;
+//				}
+//			@Override
+//			public Class<?> getColumnClass(int columnIndex) {
+//				// TODO Auto-generated method stub
+//				return getValueAt(0, columnIndex).getClass();
+//			}
+//	    };
+//    }
+//				
+//public void foodPrint(ArrayList<FoodHouseVO> list)
+//	{
+//   	 try
+//   	 {
+//   		 for(int i=0;i<10;i++)
+//   		 {
+//   			 FoodHouseVO vo=list.get(i);
+//   			 URL url=new URL(vo.getPoster());
+//   			 Image image=ImageChange.getImage(new ImageIcon(url), 120, 150);
+//   			 String data="<html>"+vo.getTitle()+"&nbsp;"
+//   			            +"<span style=\"color:orange\">"
+//   					    +vo.getTitle_explain()+"</span><br>"
+//   					    +vo.getPrice()+"<br>"
+//   					    +vo.getExplain()+"<br>"
+//   					    +"</html>";
+//   			 Object[] obj={vo.getCno(),new ImageIcon(image),data};
+//   			 model.addRow(obj);
+//   			 
+//   		 }
+//   	 }catch(Exception ex){ex.printStackTrace();}
+//    }
+//
+//
+//	public void mouseClicked(MouseEvent e) {
+//		// TODO Auto-generated method stub
+//		if(e.getSource()==pan)
+//		{
+//			if(e.getClickCount()==2)
+//			{
+////				int row=table.getSelectedRow();
+////				String fno=model.getValueAt(row, 0).toString();
+//				//System.out.println("선택 번호:"+fno);
+//				//FoodHouseVO vo=fm.foodInfoData(Integer.parseInt(fno));
+//				cp.fdp.foodPrint(vo);
+//				cp.card.show(cp, "fdetail");
+//			}
+//		}
+//	}
+//	public void mousePressed(MouseEvent e) {
+//		// TODO Auto-generated method stub
+//		
+//	}
+//	public void mouseReleased(MouseEvent e) {
+//		// TODO Auto-generated method stub
+//		
+//	}
+//	public void mouseEntered(MouseEvent e) {
+//		// TODO Auto-generated method stub
+//		
+//	}
+//	public void mouseExited(MouseEvent e) {
+//		// TODO Auto-generated method stub
+//		
+//	}
+//	@Override
+//	public void actionPerformed1(ActionEvent e) {
+//		// TODO Auto-generated method stub
+//		if(e.getSource()==b)
+//		{
+//			cp.card.show(cp, "home");
+//		}
+//	}
 }

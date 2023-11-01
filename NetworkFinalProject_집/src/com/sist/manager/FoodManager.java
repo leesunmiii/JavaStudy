@@ -82,13 +82,19 @@ public class FoodManager {
 		   }catch(Exception ex) {}
 	   }
 	   
-	/*FileInputStream fis=null;
+	/* 
+	 *  // 본죽 파일에서 직렬화된 객체를 읽어서 cList에 저장========================
+	 * FileInputStream fis=null;
 	   ObjectInputStream ois=null;
 	   try
 	   {
+	    	// bonjuk 파일에서 직렬화된 객체 읽어온다
 		   fis=new FileInputStream("c:\\java_data\\bonjuk.txt");
 		   ois=new ObjectInputStream(fis);
+		   
+		  // cList에 저장
 		   cList=(ArrayList<FoodCategoryVO>)ois.readObject();
+		   
 	   }catch(Exception ex)
 	   {
 		   ex.printStackTrace();
@@ -100,10 +106,14 @@ public class FoodManager {
 			   fis.close();
 			   ois.close();
 		   }catch(Exception ex) {}
+		   // ============================
 	   }*/
+	   
    }
    
- /*public static void main(String[] args) {
+ /*
+  * 
+  	public static void main(String[] args) {
 	   FoodManager fm=new FoodManager();
 	   System.out.println("저장 완료!!");
 	   for(FoodCategoryVO vo:cList)
@@ -169,6 +179,60 @@ public class FoodManager {
 	   for(int i=start;i<=end;i++)
 	   {
 		   list.add(cList.get(i));
+	   }
+	   return list;
+   }
+   
+   
+   public FoodCategoryVO categoryInfoData(String title)
+   {
+	   FoodCategoryVO vo=new FoodCategoryVO();
+	   for(FoodCategoryVO fvo:cList)
+	   {
+		   if(fvo.getTitle().equals(title))
+		   {
+			   vo=fvo;
+			   break;
+		   }
+	   }
+	   return vo;
+   }
+   public ArrayList<FoodHouseVO> foodHouseListData(int cno)
+   {
+	   ArrayList<FoodHouseVO> list=
+			   new ArrayList<FoodHouseVO>();
+	   for(FoodHouseVO fvo:fList)
+	   {
+		   if(fvo.getCno()==cno)
+		   {
+			   list.add(fvo);
+		   }
+	   }
+	   return list;
+   }
+   public FoodHouseVO foodInfoData(int fno)
+   {
+	   FoodHouseVO vo=new FoodHouseVO();
+	   for(FoodHouseVO fvo:fList)
+	   {
+		   if(fvo.getCno()==fno)
+		   {
+			   vo=fvo;
+			   break;
+		   }
+	   }
+	   return vo;
+   }
+   public ArrayList<FoodHouseVO> foodFindData(String title)
+   {
+	   ArrayList<FoodHouseVO> list=
+			   new ArrayList<FoodHouseVO>();
+	   for(FoodHouseVO fvo:fList)
+	   {
+		   if(fvo.getTitle().contains(title))
+		   {
+			   list.add(fvo);
+		   }
 	   }
 	   return list;
    }
